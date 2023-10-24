@@ -4,10 +4,10 @@ project(pybtas)
 add_subdirectory(pybind11)
 pybind11_add_module(pybtas src/main.cpp)
 
-include_directories(~/opt/eigen-3.3.9)
+include_directories(/usr/local/include/eigen3 /usr/include/eigen3)
 
 find_package(BTAS
-        PATHS ~/opt/btas/)
+        PATHS /usr/local/include/btas /usr/include/btas)
 target_link_libraries(pybtas PUBLIC BTAS::BTAS)
 
 
